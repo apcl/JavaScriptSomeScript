@@ -1,0 +1,37 @@
+body {
+	margin-left: 25%;
+	margin-right:25%;
+	width: 50%;
+}
+
+header h1 {
+	text-align: center;
+}
+
+nav {
+	background-color: white;
+}
+
+footer {
+	text-align: center;
+}
+
+#lista li{
+	background-color: #cddc39;
+	border-radius: 5px;
+	float: left;
+	list-style: none;
+	margin-left: .5%;
+	margin-right:  .5%;
+	text-align: center;
+	width: 30%;	
+}
+
+#sect1 {
+	border-radius: 10px;
+	background-color: #eaeaea;
+	padding-top: .25em;
+	padding-bottom: .25em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
