@@ -1,0 +1,26 @@
+{
+  "Falabella" : {
+    "p1" : {
+      "marca" : "Sony",
+      "modelo" : "Playstation 4",
+      "precio" : 299990
+    },
+    "p2" : {
+      "marca" : "Samsung",
+      "modelo" : "Lavadora carga superior 12 Kg",
+      "precio" : 189990
+    }
+  },
+  "Paris" : {
+    "p1" : {
+      "marca" : "Sony",
+      "modelo" : "Playstation 4",
+      "precio" : 310000
+    },
+    "p2" : {
+      "marca" : "Samsung",
+      "modelo" : "Lavadora carga superios 12 kg",
+      "precio" : 200000
+    }
+  }
+}
