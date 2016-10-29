@@ -1,0 +1,32 @@
+{
+  "Productos" : [
+    {
+      "id" : "0",
+      "emp" : "Falabella",
+      "marca" : "Sony",
+      "modelo" : "Playstation 4",
+      "precio" : 299990
+    },
+    {
+      "id" : "1",
+      "emp" : "Falabella",
+      "marca" : "Samsung",
+      "modelo" : "Lavadora carga superior 12 Kg",
+      "precio" : 189990
+    },
+    {
+      "id" : "2",
+      "emp" : "Paris",
+      "marca" : "Sony",
+      "modelo" : "Playstation 4",
+      "precio" : 310000
+    },
+    {
+      "id" : "3",
+      "emp" : "Paris",
+      "marca" : "Samsung",
+      "modelo" : "Lavadora carga superios 12 kg",
+      "precio" : 200000
+    }
+  ]
+}
