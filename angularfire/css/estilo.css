@@ -1,0 +1,7 @@
+.nomuestra {
+	display: none;
+}
+
+.muestra {
+	display: block;
+}

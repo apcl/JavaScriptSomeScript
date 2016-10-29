@@ -3,13 +3,12 @@ app.controller("angfireCtrl", function($scope, $firebaseArray) {
   var ref = firebase.database().ref().child("Productos");
   // create a synchronized array
   $scope.productos = $firebaseArray(ref);
-  // console.log($scope.productos);
-  // add new items to the array
-  // the message is automatically added to our Firebase database!
-  // $scope.addMessage = function() {
-  //   $scope.messages.$add({
-  //     text: $scope.newMessageText
-  //   });
-  // };
-  // click on `index.html` above to see $remove() and $save() in action
+
+  $scope.clase = "nomuestra";
+
+  $scope.mostrar = function(){
+  	$scope.clase = "muestra";
+  	$scope.fin = $scope.filtro;
+  }
+
 });

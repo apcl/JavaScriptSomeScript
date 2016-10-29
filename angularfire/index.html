@@ -2,10 +2,12 @@
 <html ng-app="angfireMdl">
 <head>
 	<title>AngularFire</title>
+	<link rel="stylesheet" href="css/estilo.css">
 </head>
 <body ng-controller="angfireCtrl">
 	<input type="text" ng-model="filtro">
-	<div ng-repeat="producto in productos | filter : filtro">		
+	<input type="button" value="Buscar" ng-click="mostrar()">
+	<div ng-repeat="producto in productos | filter : fin" ng-class="clase">
 		<h2>{{producto.emp}}</h2>
 		<h3>{{producto.marca + " " + producto.modelo}}</h3>
 		<p>{{producto.precio}}</p>
