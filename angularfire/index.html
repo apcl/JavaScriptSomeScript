@@ -8,7 +8,7 @@
 <body ng-controller="angfireCtrl">
 
 	<div ng-class="divindex">
-  		<h1 ng-class="pch">Comprara</h1>
+  		<h1 ng-class="pch" ng-class="textoLogo" ng-click="home()">Comprara</h1>
         <input type="text" name="producto" ng-class="txtSearch" placeholder="Marca, Modelo, Caracteristicas" ng-model="filtro">
         <button type="button" ng-class="btnSearch" ng-click="mostrar()">Buscar</button>    	
     </div>
@@ -18,7 +18,18 @@
 		<input class="form-control" type="button" value="Buscar" ng-click="mostrar()">
 	</div>
 	<br><br>-->
-	<div ng-repeat="producto in productos | filter : fin" ng-class="clase">
+	<div class="content">
+		<div ng-repeat="producto in productos | filter : fin" ng-class="clase">
+			<div class="thumbnail">
+		        <img class="imagenList" src="{{producto.imagen}}" alt="{{producto.nombre}}">
+		        <div class="caption">
+		          <p class="prodList">{{producto.nombre}}</p>
+		          <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+		    	</div>
+		    </div>
+	    </div>
+    </div>
+	<!-- <div ng-repeat="producto in productos | filter : fin" ng-class="clase">
 		<img ng-class="imagen" ng-src="{{producto.imagen}}">
 		<div ng-class="content">
 			<h2>{{producto.nombre}}</h2>
@@ -28,7 +39,7 @@
 			<p>Precio: ${{producto.precio}}</p>
 			<a ng-href="{{producto.url}}">{{producto.url}}</a>
 		</div>
-	</div>
+	</div> -->
 
 	<footer class="footer">
       <ul class="copyright pch1">

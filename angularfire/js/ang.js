@@ -34,4 +34,13 @@ app.controller("angfireCtrl", function($scope, $firebaseArray) {
   	
   	$scope.fin = $scope.filtro;
   }
+
+  $scope.home = function(){
+    $scope.pch = "pch1"
+    $scope.clase = "nomuestra";
+    $scope.divindex = "divindex1"
+    $scope.txtSearch = "frm-control1 search1"
+    $scope.btnSearch = "btn btn-primary btnBlock1"
+  }
+
 });
