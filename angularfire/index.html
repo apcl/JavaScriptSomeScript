@@ -3,46 +3,57 @@
 <head>
 	<title>AngularFire</title>
 	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body ng-controller="angfireCtrl">
-	<input type="text" ng-model="filtro">
-	<input type="button" value="Buscar" ng-click="mostrar()">
+
+	<div ng-class="divindex">
+  		<h1 ng-class="pch">Comprara</h1>
+        <input type="text" name="producto" ng-class="txtSearch" placeholder="Marca, Modelo, Caracteristicas" ng-model="filtro">
+        <button type="button" ng-class="btnSearch" ng-click="mostrar()">Buscar</button>    	
+    </div>
+
+	<!-- <div ng-class="">
+		<input class="form-control" type="text" ng-model="filtro">
+		<input class="form-control" type="button" value="Buscar" ng-click="mostrar()">
+	</div>
+	<br><br>-->
 	<div ng-repeat="producto in productos | filter : fin" ng-class="clase">
-		<h2>{{producto.emp}}</h2>
-		<h3>{{producto.marca + " " + producto.modelo}}</h3>
-		<p>{{producto.precio}}</p>
+		<img ng-class="imagen" ng-src="{{producto.imagen}}">
+		<div ng-class="content">
+			<h2>{{producto.nombre}}</h2>
+			<h4>Titulo: {{producto.marca + " " + producto.modelo}}</h4>
+			<h4>Marca: {{producto.marca}}</h4>
+			<h4>Modelo: {{producto.modelo}}</h4>
+			<p>Precio: ${{producto.precio}}</p>
+			<a ng-href="{{producto.url}}">{{producto.url}}</a>
+		</div>
 	</div>
 
+	<footer class="footer">
+      <ul class="copyright pch1">
+         <li>© Copyright 2016 Comprara</li>
+         <li>Design by Comprara</a></li>
+      </ul>
+    </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- AngularJS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 	<!-- AngularFire -->
 	<script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
 	<!-- Initialize Firebase -->
 	<script>
 	  // Initialize Firebase
 	  var config = {
-	    apiKey: "AIzaSyAqnuUdDfQ9jHdtZNPJc_uwbkEUDCqkQAM",
-	    authDomain: "comprara-284a3.firebaseapp.com",
-	    databaseURL: "https://comprara-284a3.firebaseio.com",
-	    storageBucket: "comprara-284a3.appspot.com",
-	    messagingSenderId: "1056513774224"
+	    apiKey: "AIzaSyDdCg2jU_8bdToxKQ9X57m1O8uB_0v2VXg",
+	    authDomain: "comprara-6a984.firebaseapp.com",
+	    databaseURL: "https://comprara-6a984.firebaseio.com",
+	    storageBucket: "comprara-6a984.appspot.com",
+	    messagingSenderId: "799744714077"
 	  };
 	  firebase.initializeApp(config);
 	</script>

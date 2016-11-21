@@ -1,0 +1,40 @@
+@media (max-width: 640px){
+	.alerta {
+	    margin-top: 5rem;
+	}
+
+	.img-prod {
+	    margin-left: 45px;
+	    margin-bottom: 20px;
+	}
+
+	.divindex{
+		padding-right: 15px;
+	    padding-left: 15px;
+	    margin-right: auto;
+	    margin-left: auto;
+	}
+
+	.pch1 {
+	    padding-bottom: 4rem;
+	}
+
+	.form-prod {
+	    margin-left: -15px;
+	}
+
+	.text-prod, .btn-prod{
+	    width: 100%;
+	}
+
+	.marca{
+	    margin-left: 85px;
+	    margin-right: 85px;
+	}
+
+	.nav-img-chart{
+	    margin-top: 0;
+	    margin-bottom: 0;
+	}
+	
+}
