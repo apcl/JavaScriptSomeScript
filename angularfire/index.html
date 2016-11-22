@@ -3,7 +3,7 @@
 <head>
 	<title>AngularFire</title>
 	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body ng-controller="angfireCtrl">
 
@@ -23,8 +23,67 @@
 			<div class="thumbnail">
 		        <img class="imagenList" src="{{producto.imagen}}" alt="{{producto.nombre}}">
 		        <div class="caption">
-		          <p class="prodList">{{producto.nombre}}</p>
-		          <p><a href="#" class="btn btn-primary" role="button">Ir al producto</a></p>
+		          	<p class="prodList">{{producto.nombre}}</p>
+		          	<!-- Desencadena Modal -->
+		          	<button class="btn btn-primary" data-toggle="modal" data-target="#prodModal{{$index}}">
+		          		Detalle
+		          	</button>
+
+		          	<!-- Begin Modal -->
+					<div class="modal fade" id="prodModal{{$index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog modal-lg">
+					    <div class="modal-content">
+
+					    	<!-- Header -->
+						    <div class="modal-header">
+						    	<h4>{{producto.nombre}}</h4>
+						    </div>
+
+						    <!-- Body -->
+						    <div class="modal-body">
+						    	<img class="imagenList" src="{{producto.imagen}}" alt="{{producto.nombre}}">
+						    	<div>
+						    		<table class="table table-hover table-bordered">
+						    			<thead>
+							    			<tr>
+							    				<th>Empresa</th>
+							    				<th>Precio</th>
+							    				<th>Sitio</th>
+							    			</tr>
+						    			</thead>
+						    			<tbody>
+							    			<tr ng-if="!producto.url1_pcfactory">
+							    			</tr>
+							    			<tr ng-if="producto.url1_pcfactory">
+							    				<td>PC Factory</td>
+							    				<td >${{producto.precio_pcfactory}}</td>
+							    				<td><a href="{{producto.url1_pcfactory}}" target="_blank">Ir al sitio</a></td>
+							    			</tr>
+							    			<tr ng-if="!producto.url_peta">
+							    			</tr>
+							    			<tr ng-if="producto.url_peta">
+							    				<td>Peta</td>
+							    				<td>${{producto.precio_peta}}</td>
+							    				<td><a href="{{producto.url_peta}}" target="_blank">Ir al sitio</a></td>
+							    			</tr>
+						    			</tbody>
+									</table>
+						    	</div>
+						    </div>
+
+						    <!-- Footer -->
+						    <div class="modal-footer">
+						    	<button class="btn btn-danger" data-dismiss="modal">
+						    		Cerrar
+						    		<!-- <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> -->
+						    	</button>
+						    </div>
+
+					    </div>
+					  </div>
+					</div>
+					<!-- End Modal -->
+
 		    	</div>
 		    </div>
 	    </div>
@@ -50,6 +109,8 @@
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 	<!-- AngularJS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<!-- Firebase -->
